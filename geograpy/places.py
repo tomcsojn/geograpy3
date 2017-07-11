@@ -1,4 +1,5 @@
 import os
+import inspect
 import csv
 import sqlite3
 from collections import Counter
@@ -26,10 +27,10 @@ and relationships between places (city is inside region is inside country, etc.)
 class PlaceContext(object):
     """Class that matches strings to places."""
 
-    def __init__(self, place_names, db_file=None):
+    def __init__(self, place_names, db_file = None):
         """Init method."""
         db_file = db_file or \
-            os.path.dirname(os.path.realpath(__file__)) + "/locs.db"
+            os.path.dirname(os.path.realpath(inspect.stack()[0][1])) + "/locs.db"
         self.conn = sqlite3.connect(db_file)
         if not self.db_has_data():
             self.populate_db()
@@ -53,8 +54,8 @@ class PlaceContext(object):
              metro_code TEXT,
              time_zone TEXT)'''
         cur.execute(table_creation)
-        cur_dir = os.path.dirname(os.path.realpath(__file__))
-        with open(cur_dir + "/data/GeoLite2-City-Locations.csv", "r") as info:
+        cur_dir = os.path.dirname(os.path.realpath(inspect.stack()[0][1]))
+        with open(cur_dir + "/data/GeoLite2-City-Locations.csv", "r", encoding = 'utf8') as info:
             reader = csv.reader(info)
             for row in reader:
                 cur.execute("INSERT INTO cities VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);", row)
@@ -77,8 +78,8 @@ class PlaceContext(object):
 
     def correct_country_mispelling(self, s):
         """Method used to correct country mispellings."""
-        cur_dir = os.path.dirname(os.path.realpath(__file__))
-        with open(cur_dir + "/data/ISO3166ErrorDictionary.csv", "r") as info:
+        cur_dir = os.path.dirname(os.path.realpath(inspect.stack()[0][1]))
+        with open(cur_dir + "/data/ISO3166ErrorDictionary.csv", "r", encoding = 'utf8') as info:
             reader = csv.reader(info)
             for row in reader:
                 if s in remove_non_ascii(row[0]):
@@ -161,9 +162,6 @@ class PlaceContext(object):
         self.cities = []
         self.country_cities = {}
         self.address_strings = []
-
-        if not self.countries:
-            self.set_countries()
 
         if not self.regions:
             self.set_regions()
