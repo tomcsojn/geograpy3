@@ -1,25 +1,18 @@
-This fork fixes issues caused by using geograpy with Python 3 and/or Anaconda.
+This fork fixes issues caused by using geograpy (or geograpy2) with Python 3 and/or Anaconda, and has aptly been renamed geograpy3. All methods work the same as in geograpy and geograpy2, with the exception of those that were not implemented with the syntax used in the README.  All methods now work with the syntax decribed in the README, which has been edited lightly to reduce confusion in some examples. 
 
-
-Geograpy
+Geograpy3
 ========
 
 Extract place names from a URL or text, and add context to those names -- for 
 example distinguishing between a country, region or city. 
 
-## Install & Setup
+## Install
 
 Grab the package using `pip` and `git` (this could take a few minutes)
 Try using one of the following:
 
-    1. pip install git+git://github.com/jmbielec/geograpy.git 
-    2. pip install git+https://github.com/jmbielec/geograpy.git 
-
-Geograpy uses [NLTK](http://www.nltk.org/) for entity recognition, so you'll also need 
-to download the models we're using. Fortunately there's a command that'll take 
-care of this for you. 
-
-    geograpy-nltk
+    1. pip install git+git://github.com/jmbielec/geograpy3.git 
+    2. pip install git+https://github.com/jmbielec/geograpy3.git 
 
 ## Basic Usage
 
@@ -54,7 +47,7 @@ information about the relationships between places.
 ## Last But Not Least
 
 While a text might mention many places, it's probably focused on one or two, so 
-Geograpy also breaks down countries, regions and cities by number of mentions.
+Geograpy3 also breaks down countries, regions and cities by number of mentions.
 
 * `places.country_mentions`
 * `places.region_mentions`
@@ -67,7 +60,7 @@ name and the second item is the number of mentions. For example:
 
 ## If You're Really Serious
 
-You can of course use each of Geograpy's modules on their own. For example:
+You can of course use each of Geograpy3's modules on their own. For example:
 
     from geograpy import extraction
 
@@ -100,14 +93,14 @@ is available after the corresponding `set_` method is called.
 
 ## Credits
 
-Geograpy uses the following excellent libraries:
+Geograpy3 uses the following excellent libraries:
 
 * [NLTK](http://www.nltk.org/) for entity recognition
 * [newspaper](https://github.com/codelucas/newspaper) for text extraction from HTML
 * [jellyfish](https://github.com/sunlightlabs/jellyfish) for fuzzy text match
 * [pycountry](https://pypi.python.org/pypi/pycountry) for country/region lookups
 
-Geograpy uses the following data sources:
+Geograpy3 uses the following data sources:
 
 * [GeoLite2](http://dev.maxmind.com/geoip/geoip2/geolite2/) for city lookups
 * [ISO3166ErrorDictionary](https://github.com/bodacea/countryname/blob/master/countryname/databases/ISO3166ErrorDictionary.csv) for common country mispellings _via [Sara-Jayne Terp](https://github.com/bodacea)_
