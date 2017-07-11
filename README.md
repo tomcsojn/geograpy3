@@ -1,6 +1,5 @@
-This fork fixes issues with newer versions of nltk.
+This fork fixes issues caused by using geograpy with Python 3 and/or Anaconda.
 
-A rewrite that fixes more issues is available here, please use it instead: https://github.com/Corollarium/geograpy2
 
 Geograpy
 ========
@@ -10,9 +9,11 @@ example distinguishing between a country, region or city.
 
 ## Install & Setup
 
-Grab the package using `pip` (this will take a few minutes)
+Grab the package using `pip` and `git` (this could take a few minutes)
+Try using one of the following:
 
-    pip install geograpy
+    1. pip install git+git://github.com/jmbielec/geograpy.git 
+    2. pip install git+https://github.com/jmbielec/geograpy.git 
 
 Geograpy uses [NLTK](http://www.nltk.org/) for entity recognition, so you'll also need 
 to download the models we're using. Fortunately there's a command that'll take 
@@ -26,7 +27,7 @@ Import the module, give some text or a URL, and presto.
 
     import geograpy
     url = 'http://www.bbc.com/news/world-europe-26919928'
-    places = geograpy.get_place_context(url=url)
+    places = geograpy.get_place_context(url)
 
 Now you have access to information about all the places mentioned in the linked 
 article. 
@@ -70,7 +71,7 @@ You can of course use each of Geograpy's modules on their own. For example:
 
     from geograpy import extraction
 
-    e = extraction.Extractor(url='http://www.bbc.com/news/world-europe-26919928')
+    e = extraction.Extractor('http://www.bbc.com/news/world-europe-26919928')
     e.find_entities()
 
     # You can now access all of the places found by the Extractor
