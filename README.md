@@ -26,8 +26,8 @@ care of this for you.
 Import the module, give some text or a URL, and presto.
 
     import geograpy
-    url = 'http://www.bbc.com/news/world-europe-26919928'
-    places = geograpy.get_place_context(url)
+    link = 'http://www.bbc.com/news/world-europe-26919928'
+    places = geograpy.get_place_context(url = link)
 
 Now you have access to information about all the places mentioned in the linked 
 article. 
@@ -71,7 +71,7 @@ You can of course use each of Geograpy's modules on their own. For example:
 
     from geograpy import extraction
 
-    e = extraction.Extractor('http://www.bbc.com/news/world-europe-26919928')
+    e = extraction.Extractor(url = 'http://www.bbc.com/news/world-europe-26919928')
     e.find_entities()
 
     # You can now access all of the places found by the Extractor
