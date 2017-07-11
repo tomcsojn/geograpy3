@@ -5,17 +5,17 @@ import nltk
 class Extractor(object):
     """Extractor class."""
 
-    def __init__(self, text=None):
+    def __init__(self, url = None):
         """Init method for the object."""
-        if not text:
-            raise Exception('text is required')
+        if not url:
+            raise Exception('url is required')
 
-        self.text = text
+        self.url = url
         self.places = []
 
     def find_entities(self):
         """Method used to extract the parts of speech that might be places."""
-        text = nltk.word_tokenize(self.text)
+        text = nltk.word_tokenize(self.url)
         text_tags = nltk.pos_tag(text)
         # might make sense to move this inside the Place Context object
         # to allow for a fuzzier search;
