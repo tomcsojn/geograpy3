@@ -23,4 +23,4 @@ def testPlaces():
     pc.set_other()
 
     assert 'Aleppo' in pc.cities
-    
+    print('Tests passed.')
