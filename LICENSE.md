@@ -1,6 +1,3 @@
-Copyright for portions of geograpy3 are held by Corollarium, 2015 as part of geograpy2.
-All other copyright for geograpy3 are held by Matthew Bielec, 2017.
-
 The MIT License (MIT)
 
 Copyright (c) 2017 Matthew Bielec
