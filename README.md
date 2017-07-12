@@ -15,11 +15,14 @@ Try using one of the following:
 
 ## Getting Started
 
-Import the module, give a URL (or text), and presto.
+Import the module, give a URL or text, and presto.
 
     import geograpy3
     link = 'http://www.bbc.com/news/world-europe-26919928'
     places = geograpy3.get_place_context(url = link)
+    
+    text_input = "Perfect just Perfect! It's a perfect storm for Nairobi"
+    more_places = geograpy3.get_place_context(text = text_input)
 
 Now you have access to information about all the places mentioned in the linked 
 article. 
