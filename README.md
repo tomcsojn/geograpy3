@@ -3,7 +3,7 @@
 Geograpy3
 ========
 
-Geograpy3 fixes issues caused by using geograpy with later versions of Python 3 (specifically in the Spyder IDE of Anaconda, but should work with Pyhon 3 in general).  Some functionalities have remained the same as in geograpy (and geograpy2) while others have changed.  Most noticeably is that geograpy3 no longer performs extractions from text, but relies solely on extraction from URL.  Its core functionality is now to extract place names from a URL, and add context to those names -- for example distinguishing between a country, region or city.  For more information on changes from geograpy, installation, usage, and syntax, please continue reading below.
+Geograpy3 fixes issues caused by using Geograpy with later versions of Python 3 (specifically in the Spyder IDE of Anaconda, but should work with Pyhon 3 in general).  Some functionalities have remained the same as in Geograpy (and Geograpy2) while others have changed.  Most noticeably is that geograpy3 no longer performs extractions from text, but relies solely on extraction from URL.  Its core functionality is now to extract place names from a URL, and add context to those names -- for example distinguishing between a country, region or city.  For more information on changes from Geograpy, installation, usage, and syntax, please continue reading below.
 
 ## Install
 
@@ -13,9 +13,9 @@ Try using one of the following:
     1. pip install git+git://github.com/jmbielec/geograpy3.git 
     2. pip install git+https://github.com/jmbielec/geograpy3.git 
 
-## Basic Usage
+## Getting Started
 
-Import the module, give some text or a URL, and presto.
+Import the module, give a URL, and presto.
 
     import geograpy3
     link = 'http://www.bbc.com/news/world-europe-26919928'
@@ -34,7 +34,7 @@ information like street names, points of interest, etc, but at the moment is
 a bit messy when scanning longer texts that contain possessive forms of proper 
 nouns (like "Russian" instead of "Russia").
 
-## But Wait, There's More
+## Advanced Usage
 
 In addition to listing the names of discovered places, you'll also get some 
 information about the relationships between places.
@@ -42,8 +42,6 @@ information about the relationships between places.
 * `places.country_regions` _regions broken down by country_
 * `places.country_cities` _cities broken down by country_
 * `places.address_strings` _city, region, country strings useful for geocoding_
-
-## Last But Not Least
 
 While a text might mention many places, it's probably focused on one or two, so 
 Geograpy3 also breaks down countries, regions and cities by number of mentions.
@@ -57,7 +55,7 @@ name and the second item is the number of mentions. For example:
 
     [('Russian Federation', 14), (u'Ukraine', 11), (u'Lithuania', 1)]  
 
-## If You're Really Serious
+## Running Modules Separately
 
 You can of course use each of Geograpy3's modules on their own. For example:
 
@@ -92,7 +90,7 @@ is available after the corresponding `set_` method is called.
 
 ## Opening a Ticket
 
-If you have found a bug or issue in geograpy3, please submit a ticket to the Issues tab above, and describe in as much detail as possible all circumstances, inputs, and outputs surrounding said bug.  Thank you for your help!
+If you have found a bug or issue in Geograpy3, please submit a ticket to the Issues tab above, and describe in as much detail as possible all circumstances, inputs, and outputs surrounding said bug.  Thank you for your help!
 
 
 ## Developers
@@ -106,6 +104,8 @@ For branches/pull requests unrelated to Issues, please use standard naming conve
 
 
 ## Credits
+Geograpy3 was originally forked from [lesingerouge's Geograpy](https://github.com/lesingerouge/geograpy), who originally forked from [ushahidi's Geograpy](https://github.com/ushahidi/geograpy), who I believe is the original creator of Geograpy.  Geograpy3 also used some material and inspiration from [Corollarium's Geograpy2](https://github.com/Corollarium/geograpy2).
+
 
 Geograpy3 uses the following excellent libraries:
 
