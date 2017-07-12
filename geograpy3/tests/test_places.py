@@ -1,4 +1,4 @@
-from geograpy.places import PlaceContext
+from geograpy3.places import PlaceContext
 
 def testPlaces():
     pc = PlaceContext(['Ngong', 'Nairobi', 'Kenya'])
