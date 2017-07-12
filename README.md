@@ -94,6 +94,21 @@ And of course all of the other information shown above (`country_regions` etc)
 is available after the corresponding `set_` method is called.
 
 
+## Opening a Ticket
+
+If you have found a bug or issue in geograpy3, please submit a ticket to the Issues tab above, and describe in as much detail as possible all circumstances, inputs, and outputs surrounding said bug.  Thank you for your help!
+
+
+## Developers
+
+When creating a new branch that corresponds to an Issue, please include the Issue number at the end of the branch name.
+`Example: find-entities-fix-5 would correspond to Issue number 5 regarding the find_entities() method not working.`
+
+When creating a new pull request, again reference/link the Issue number the pull request is fixing so that Issues can be closed after merging.
+
+For branches/pull requests unrelated to Issues, please use standard naming conventions and accurately describe the scope and goal of your code.  If you have any questions do not hesitate to ask, thank you!
+
+
 ## Credits
 
 Geograpy3 uses the following excellent libraries:
