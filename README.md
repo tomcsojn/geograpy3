@@ -3,7 +3,7 @@
 Geograpy3
 ========
 
-Geograpy3 fixes issues caused by using Geograpy with later versions of Python 3 (specifically in the Spyder IDE of Anaconda, but should work with Pyhon 3 in general).  Some functionalities have remained the same as in Geograpy (and Geograpy2) while others have changed.  Most noticeably is that geograpy3 no longer performs extractions from text, but relies solely on extraction from URL.  Its core functionality is now to extract place names from a URL, and add context to those names -- for example distinguishing between a country, region or city.  For more information on changes from Geograpy, installation, usage, and syntax, please continue reading below.
+Geograpy3 fixes issues caused by using Geograpy with later versions of Python 3 (specifically in the Spyder IDE of Anaconda, but should work with Pyhon 3 in general). Most functionalities have remained the same as in Geograpy (and Geograpy2) while others may have changed slightly to work in Python 3.  Its core functionality is to extract place names from a URL or text, and add context to those names -- for example distinguishing between a country, region or city.  For more information on installation, usage, and syntax, please continue reading below.
 
 ## Install
 
@@ -15,11 +15,14 @@ Try using one of the following:
 
 ## Getting Started
 
-Import the module, give a URL, and presto.
+Import the module, give a URL or text, and presto.
 
     import geograpy3
     link = 'http://www.bbc.com/news/world-europe-26919928'
     places = geograpy3.get_place_context(url = link)
+    
+    text_input = "Perfect just Perfect! It's a perfect storm for Nairobi"
+    more_places = geograpy3.get_place_context(text = text_input)
 
 Now you have access to information about all the places mentioned in the linked 
 article. 
