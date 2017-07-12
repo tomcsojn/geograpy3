@@ -1,13 +1,9 @@
-This entire repo is still under development and currently has little working functionality.  This message will be removed when it is working.
-
-
-This fork fixes issues caused by using geograpy with Python 3 (specifically in the Spyder IDE of Anaconda, bu should work with Pyhon 3 in general), and has aptly been renamed geograpy3. All methods work the same as in geograpy, with the exception of those that were not implemented with the syntax used in the README.  All methods now work with the syntax decribed in the README, which has been edited lightly to reduce confusion in some examples. 
+<b>This entire repo is still under development and currently has little working functionality.  This message will be removed when it is working.</b>
 
 Geograpy3
 ========
 
-Extract place names from a URL or text, and add context to those names -- for 
-example distinguishing between a country, region or city. 
+Geograpy3 fixes issues caused by using geograpy with later versions of Python 3 (specifically in the Spyder IDE of Anaconda, but should work with Pyhon 3 in general).  Some functionalities have remained the same as in geograpy (and geograpy2) while others have changed.  Most noticeably is that geograpy3 no longer performs extractions from text, but relies solely on extraction from URL.  Its core functionality is now to extract place names from a URL, and add context to those names -- for example distinguishing between a country, region or city.  For more information on changes from geograpy, installation, usage, and syntax, please continue reading below.
 
 ## Install
 
