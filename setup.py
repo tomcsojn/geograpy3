@@ -17,6 +17,6 @@ setup(name='geograpy3',
       author_email='jmbielec@terpmail.umd.edu',
       license='MIT',
       packages=['geograpy3'],
-      install_requires=['numpy', 'nltk', 'jellyfish', 'pycountry'],
+      install_requires=['numpy', 'nltk', 'jellyfish', 'pycountry', 'newspaper3k'],
       package_data={'geograpy3': ['data/*.csv']},
       zip_safe=False)
