@@ -1,4 +1,3 @@
-"""Main entry point for the library."""
 import nltk
 
 from geograpy3.extraction import Extractor
@@ -13,9 +12,8 @@ nltk.downloader.download('punkt')
 nltk.downloader.download('averaged_perceptron_tagger')
 
 
-def get_place_context(url = None):
-    """Wrapper function that delivers the locations in a text."""
-    e = Extractor(url = url)
+def get_place_context(url = None, text = None):
+    e = Extractor(url = url, text = text)
     e.find_entities()
 
     pc = PlaceContext(e.places)
