@@ -1,7 +1,7 @@
 This entire repo is still under development and currently has little working functionality.  This message will be removed when it is working.
 
 
-This fork fixes issues caused by using geograpy (or geograpy2) with Python 3 and/or Anaconda, and has aptly been renamed geograpy3. All methods work the same as in geograpy and geograpy2, with the exception of those that were not implemented with the syntax used in the README.  All methods now work with the syntax decribed in the README, which has been edited lightly to reduce confusion in some examples. 
+This fork fixes issues caused by using geograpy with Python 3 (specifically in the Spyder IDE of Anaconda, bu should work with Pyhon 3 in general), and has aptly been renamed geograpy3. All methods work the same as in geograpy, with the exception of those that were not implemented with the syntax used in the README.  All methods now work with the syntax decribed in the README, which has been edited lightly to reduce confusion in some examples. 
 
 Geograpy3
 ========
