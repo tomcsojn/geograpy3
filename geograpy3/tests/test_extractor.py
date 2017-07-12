@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from geograpy.extraction import Extractor
+from geograpy3.extraction import Extractor
 
 def testExtractor():
     e = Extractor(url = 'http://www.bbc.com/news/world-europe-26919928')
