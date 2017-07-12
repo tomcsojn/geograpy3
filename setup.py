@@ -7,14 +7,14 @@ try:
 except (IOError, ImportError):
     long_description = open('README.md').read()
 
-setup(name='geograpy',
-      version='0.3.7',
+setup(name='geograpy3',
+      version='0.1.0',
       description='Extract countries, regions and cities from a URL or text',
       long_description=long_description,
-      url='https://github.com/ushahidi/geograpy',
-      download_url='https://github.com/ushahidi/geograpy/tarball/0.3.4',
-      author='Jonathon Morgan',
-      author_email='jonathon@ushahidi.com',
+      url='https://github.com/jmbielec/geograpy3',
+      download_url='https://github.com/jmbielec/geograpy3',
+      author='Matthew Bielec',
+      author_email='jmbielec@terpmail.umd.edu',
       license='MIT',
       packages=['geograpy'],
       install_requires=['numpy', 'nltk', 'jellyfish', 'pycountry'],
