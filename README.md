@@ -21,9 +21,9 @@ Try using one of the following:
 
 Import the module, give some text or a URL, and presto.
 
-    import geograpy
+    import geograpy3
     link = 'http://www.bbc.com/news/world-europe-26919928'
-    places = geograpy.get_place_context(url = link)
+    places = geograpy3.get_place_context(url = link)
 
 Now you have access to information about all the places mentioned in the linked 
 article. 
@@ -65,30 +65,30 @@ name and the second item is the number of mentions. For example:
 
 You can of course use each of Geograpy3's modules on their own. For example:
 
-    from geograpy import extraction
+    from geograpy3 import extraction
 
     e = extraction.Extractor(url = 'http://www.bbc.com/news/world-europe-26919928')
     e.find_entities()
 
     # You can now access all of the places found by the Extractor
-    print e.places
+    print(e.places)
 
 Place context is handled in the `places` module. For example:
 
-    from geograpy import places
+    from geograpy3 import places
 
     pc = places.PlaceContext(['Cleveland', 'Ohio', 'United States'])
     
     pc.set_countries()
-    print pc.countries #['United States']
+    print(pc.countries) #['United States']
 
     pc.set_regions()
-    print pc.regions #['Ohio']
+    print(pc.regions) #['Ohio']
 
     pc.set_cities()
-    print pc.cities #['Cleveland']
+    print(pc.cities) #['Cleveland']
 
-    print pc.address_strings #['Cleveland, Ohio, United States']
+    print(pc.address_strings) #['Cleveland, Ohio, United States']
 
 And of course all of the other information shown above (`country_regions` etc) 
 is available after the corresponding `set_` method is called.
@@ -124,3 +124,5 @@ Geograpy3 uses the following data sources:
 * [ISO3166ErrorDictionary](https://github.com/bodacea/countryname/blob/master/countryname/databases/ISO3166ErrorDictionary.csv) for common country mispellings _via [Sara-Jayne Terp](https://github.com/bodacea)_
 
 Hat tip to [Chris Albon](https://github.com/chrisalbon) for the name.
+
+Released under the MIT license.
