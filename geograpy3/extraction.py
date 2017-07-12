@@ -1,30 +1,32 @@
-"""Extractor class used to get the parts of speech."""
 import nltk
+from newspaper import Article
 
 
 class Extractor(object):
-    """Extractor class."""
 
-    def __init__(self, url = None):
-        """Init method for the object."""
-        if not url:
-            raise Exception('url is required')
-
+    def __init__(self, url = None, text = None):
+        if not url and not text:
+            raise Exception('url or text is required')
+            
         self.url = url
+        self.text = text
         self.places = []
 
+    def set_text(self):
+        if not self.text and self.url:
+            a = Article(self.url)
+            a.download()
+            a.parse()
+            self.text = a.text
+
+
     def find_entities(self):
-        """Method used to extract the parts of speech that might be places."""
-        text = nltk.word_tokenize(self.url)
-        text_tags = nltk.pos_tag(text)
-        # might make sense to move this inside the Place Context object
-        # to allow for a fuzzier search;
-        # ie: what if the city name is lowercased?
-        nes = nltk.ne_chunk(text_tags)
+        self.set_text()
+
+        text = nltk.word_tokenize(self.text)
+        nes = nltk.ne_chunk(nltk.pos_tag(text))
 
         for ne in nes:
             if type(ne) is nltk.tree.Tree:
-                if ne.label() == 'GPE' or \
-                   ne.label() == 'PERSON' or \
-                   ne.label() == 'ORGANIZATION':
-                    self.places.append(' '.join([i[0] for i in ne.leaves()]))
+                if (ne.label() == 'GPE' or ne.label() == 'PERSON' or ne.label() == 'ORGANIZATION'):
+                    self.places.append(u' '.join([i[0] for i in ne.leaves()]))
