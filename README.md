@@ -15,7 +15,7 @@ Try using one of the following:
 
 ## Getting Started
 
-Import the module, give a URL, and presto.
+Import the module, give a URL (or text), and presto.
 
     import geograpy3
     link = 'http://www.bbc.com/news/world-europe-26919928'
