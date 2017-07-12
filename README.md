@@ -3,7 +3,7 @@
 Geograpy3
 ========
 
-Geograpy3 fixes issues caused by using Geograpy with later versions of Python 3 (specifically in the Spyder IDE of Anaconda, but should work with Pyhon 3 in general).  Some functionalities have remained the same as in Geograpy (and Geograpy2) while others have changed.  Most noticeably is that geograpy3 no longer performs extractions from text, but relies solely on extraction from URL.  Its core functionality is now to extract place names from a URL, and add context to those names -- for example distinguishing between a country, region or city.  For more information on changes from Geograpy, installation, usage, and syntax, please continue reading below.
+Geograpy3 fixes issues caused by using Geograpy with later versions of Python 3 (specifically in the Spyder IDE of Anaconda, but should work with Pyhon 3 in general). Most functionalities have remained the same as in Geograpy (and Geograpy2) while others may have changed slightly to work in Python 3.  Its core functionality is to extract place names from a URL or text, and add context to those names -- for example distinguishing between a country, region or city.  For more information on installation, usage, and syntax, please continue reading below.
 
 ## Install
 
