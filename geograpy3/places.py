@@ -217,3 +217,4 @@ class PlaceContext(object):
                        not in l for l in places)
 
         self.other = [p for p in self.places if unused(p)]
+        
