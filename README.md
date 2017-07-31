@@ -1,4 +1,4 @@
-<b>This entire repo is still under development and currently has little working functionality.  This message will be removed when it is working.</b>
+<b>This entire repo is still under development and currently has only some basic functionality.  Pull requests to fix some of the outstading Issues would be appreciated, developers of all experience level welcome. </b>
 
 Geograpy3
 ========
