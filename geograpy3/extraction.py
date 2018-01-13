@@ -1,6 +1,6 @@
 import nltk
 from newspaper import Article
-#this is a test
+#this is a t
 
 class Extractor(object):
 
