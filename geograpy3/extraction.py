@@ -1,6 +1,7 @@
 import nltk
 from newspaper import Article
 
+#this comment can be ignored, just for PyCharm test purposes
 
 class Extractor(object):
 
